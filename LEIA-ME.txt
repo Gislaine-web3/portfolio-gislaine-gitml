@@ -1,0 +1,30 @@
+PORTFÓLIO GISLAINE — GITML
+
+ARQUIVOS
+index.gitml: fonte editável, com GITML, HTML semântico e CSS personalizado.
+index.html: página pronta para abrir no navegador e publicar. Autossuficiente, sem bibliotecas externas ou scripts.
+
+COMO USAR
+1. Extraia o ZIP.
+2. Abra index.html no navegador para ver o portfólio.
+3. Substitua seu index.gitml pela nova fonte, mantendo uma cópia do anterior.
+4. Para compilar a fonte com o CLI instalado:
+   gitml check index.gitml
+   gitml build index.gitml
+O compilador padrão pode acrescentar seus próprios recursos JavaScript ao HTML. O index.html entregue foi preparado sem scripts, com navegação por âncoras e perguntas expansíveis nativas.
+
+PUBLICAÇÃO NO GITHUB
+Dentro da pasta do seu repositório, depois de salvar as alterações:
+   gh auth login
+   ghpush --remote https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git -m "feat: atualiza portfolio"
+Troque o endereço pelo repositório real. Para GitHub Pages, use index.html como entrada.
+
+CONTEÚDO
+Os projetos, formação, tecnologias e contatos seguem as informações fornecidas por você. Não foram acrescentados clientes, depoimentos, números de instalações, benchmarks ou certificações fictícias.
+O número 14+ segue a informação fornecida pela autora; não foi auditado. Os links de projetos foram preservados do material fornecido e não foram todos validados online.
+O selo de liderança no Marketplace foi removido: aparecer primeiro em uma busca específica não significa ser o produto número 1 de todo o Marketplace.
+A área de terminal ilustra comandos; não executa código no navegador.
+
+VALIDAÇÃO
+Fonte compilada com GITML 0.2.4, sem erros ou avisos.
+Página verificada em larguras desktop e mobile, sem rolagem horizontal nos tamanhos testados.
