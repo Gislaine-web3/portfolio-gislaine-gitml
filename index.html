@@ -1,977 +1,1071 @@
 <!doctype html>
 <html lang="pt-BR" data-theme="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="generator" content="GITML 0.1.2">
-<title>Gislaine Cristina Lopes | Full Stack, Web3 e Developer Tools</title>
-<meta name="theme-color" content="#7c5cff">
-<meta name="description" content="Conheça meus projetos, ferramentas CLI e extensões para VS Code.">
-<meta property="og:title" content="Gislaine Cristina Lopes | Full Stack, Web3 e Developer Tools">
-<meta property="og:description" content="Conheça meus projetos, ferramentas CLI e extensões para VS Code.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="GITML 0.1.2">
+  <title>Gislaine Cristina Lopes | Full Stack, Web3 e Developer Tools</title>
+  <meta name="theme-color" content="#7c5cff">
+  <meta name="description" content="Portfólio profissional: desenvolvimento Full Stack, Web3, ferramentas CLI e ecossistema GBIT.">
+  <meta property="og:title" content="Gislaine Cristina Lopes | Full Stack, Web3 e Developer Tools">
+  <meta property="og:description" content="Aplicações, ferramentas para desenvolvedores, Web3 e produtos do ecossistema GBIT.">
 
-<style>
-  /* Banner no topo do portfólio */
-  .portfolio-banner {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    line-height: 0;
-    background: var(--g-bg, #07080d);
-  }
+  <style>
+    :root {
+      --ink: #f4f5ff;
+      --muted: #a9b1cb;
+      --line: rgba(163, 177, 223, .16);
+      --violet: #af8bff;
+      --cyan: #6ce4f2;
+      --pink: #ff94cf;
+      --green: #89efbd;
+      --radius: 16px;
+    }
 
-  .portfolio-banner-image {
-    display: block;
-    width: 100%;
-    max-width: 1440px;
-    height: auto;
-    max-height: none;
-    margin: 0 auto;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-</style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>:root{--g-primary:#7c5cff;--g-font:'Sora',ui-sans-serif,system-ui,sans-serif}:root{--g-accent:#19c6b3;--g-gradient:linear-gradient(110deg,var(--g-primary),var(--g-accent));--g-bg:#fbfbfd;--g-surface:#fff;--g-soft:#eef1fb;--g-ink:#0d1120;--g-muted:#5d6577;--g-line:#e8eaf0;--g-radius:18px;--g-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.12)}[data-theme=dark]{--g-bg:#07080d;--g-surface:#10121a;--g-soft:#141722;--g-ink:#f2f4f8;--g-muted:#9aa3b5;--g-line:#1f2330;--g-shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -16px rgba(0,0,0,.6)}@supports (color:color-mix(in oklab,red,blue)){:root{--g-accent:color-mix(in oklab,var(--g-primary),#19c6b3 55%);--g-soft:color-mix(in oklab,var(--g-primary) 7%,#fff)}[data-theme=dark]{--g-soft:color-mix(in oklab,var(--g-primary) 14%,#07080d)}}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--g-bg);color:var(--g-ink);font-family:var(--g-font);line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}a{color:inherit}img{max-width:100%;display:block}h1,h2,h3,h4{line-height:1.1;letter-spacing:-.03em;margin:0 0 .5em}h2{font-size:clamp(28px,4vw,44px)}h3{font-size:19px;letter-spacing:-.01em}p{margin:0 0 1em}.g-wrap{max-width:1180px;margin:0 auto;padding:0 24px;width:100%}.g-section{padding:clamp(56px,9vw,112px) 0}.g-section-head{text-align:center;max-width:720px;margin:0 auto 48px}.g-section-head p{color:var(--g-muted);font-size:18px}.g-eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g-primary);margin-bottom:12px}.g-muted{color:var(--g-muted)}.g-lead{font-size:clamp(17px,2vw,20px);color:var(--g-muted);max-width:640px}.g-align-center{text-align:center;margin-left:auto;margin-right:auto;justify-content:center}.g-align-right{text-align:right;justify-content:flex-end}.g-grid{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:20px}.g-row{display:flex;gap:20px;flex-wrap:wrap;align-items:center}.g-row[data-justify=between]{justify-content:space-between}.g-row[data-justify=center]{justify-content:center}.g-stack{display:flex;flex-direction:column;gap:16px}.g-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.g-reverse>:first-child{order:2}.g-bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(180px,auto);gap:16px}.g-bento>:nth-child(1){grid-column:span 2;grid-row:span 2}.g-bento>:nth-child(4){grid-column:span 2}.g-divider{border:0;border-top:1px solid var(--g-line);margin:32px 0}.g-divider-t{display:flex;align-items:center;gap:16px;color:var(--g-muted);font-size:14px;margin:32px 0}.g-divider-t::before,.g-divider-t::after{content:'';flex:1;border-top:1px solid var(--g-line)}.g-nav{position:relative;z-index:50;border-bottom:1px solid transparent;transition:.3s}.g-sticky{position:sticky;top:0;backdrop-filter:saturate(180%) blur(14px);background:color-mix(in oklab,var(--g-bg) 75%,transparent)}.g-nav.g-scrolled{border-color:var(--g-line)}.g-nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}.g-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.03em;text-decoration:none}.g-brand img{height:28px}.g-nav-links{display:flex;align-items:center;gap:6px}.g-nav-links .g-link{padding:8px 14px;border-radius:10px;text-decoration:none;color:var(--g-muted);font-weight:500;font-size:15px;transition:.2s}.g-nav-links .g-link:hover{color:var(--g-ink);background:var(--g-soft)}.g-burger{display:none;background:none;border:0;color:inherit;cursor:pointer}.g-crumb{display:flex;gap:8px;font-size:14px;color:var(--g-muted)}.g-crumb span:last-child{color:var(--g-ink);font-weight:600}.g-crumb i{opacity:.4;font-style:normal}.g-footer{border-top:1px solid var(--g-line);padding:48px 0;margin-top:48px;color:var(--g-muted);font-size:14px}.g-footer .g-wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}.g-footer-in{display:flex;gap:20px;flex-wrap:wrap;align-items:center}.g-footer .g-link{text-decoration:none}.g-footer .g-link:hover{color:var(--g-ink)}.g-hero{position:relative;overflow:hidden;padding:clamp(72px,12vw,150px) 0 clamp(64px,10vw,120px)}.g-hero-glow{position:absolute;inset:-30% -10% auto;height:640px;background:radial-gradient(closest-side,color-mix(in oklab,var(--g-primary) 30%,transparent),transparent),radial-gradient(closest-side at 70% 40%,color-mix(in oklab,var(--g-accent) 22%,transparent),transparent);filter:blur(40px);opacity:.8;pointer-events:none;animation:g-float 12s ease-in-out infinite alternate}.g-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--g-line) 1px,transparent 1px),linear-gradient(90deg,var(--g-line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at top,#000 20%,transparent 70%);opacity:.5;pointer-events:none}.g-hero-in{position:relative;z-index:1}.g-hero-center .g-hero-body{text-align:center;max-width:880px;margin:0 auto;display:flex;flex-direction:column;align-items:center}.g-hero-center .g-hero-media{margin-top:64px}.g-hero-split .g-hero-in{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}.g-hero h1{font-size:clamp(42px,7.4vw,84px);font-weight:800;letter-spacing:-.05em;line-height:1.02;margin:20px 0}.g-hero-media img{border-radius:24px;border:1px solid var(--g-line);box-shadow:0 40px 80px -30px color-mix(in oklab,var(--g-primary) 45%,transparent)}.g-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;background:var(--g-surface);border:1px solid var(--g-line);box-shadow:var(--g-shadow);color:var(--g-ink)}.g-pill svg{color:var(--g-primary)}.g-grad{background:var(--g-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:g-shine 6s linear infinite}.g-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.g-hero-center .g-actions{justify-content:center}.g-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:12px;font:600 15px/1 var(--g-font);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}.g-btn:hover{transform:translateY(-2px)}.g-btn:active{transform:translateY(0)}.g-btn-primary{background:var(--g-primary);color:#fff;box-shadow:0 8px 24px -8px var(--g-primary),inset 0 1px 0 rgba(255,255,255,.2)}.g-btn-primary:hover{box-shadow:0 14px 32px -10px var(--g-primary)}.g-btn-outline,.g-btn-secondary{background:var(--g-surface);border-color:var(--g-line);color:var(--g-ink)}.g-btn-ghost{background:transparent;color:var(--g-ink)}.g-btn-ghost:hover{background:var(--g-soft)}.g-btn-soft{background:var(--g-soft);color:var(--g-primary)}.g-btn-gradient{background:var(--g-gradient);color:#fff}.g-btn-light{background:#fff;color:#0d1120}.g-btn-sm{padding:8px 14px;font-size:13px}.g-btn-lg{padding:15px 26px;font-size:16px;border-radius:14px}.g-icon-btn{padding:9px}.g-card,.g-feature,.g-pricing,.g-testimonial,.g-stat,.g-member{background:var(--g-surface);border:1px solid var(--g-line);border-radius:var(--g-radius);padding:28px;box-shadow:var(--g-shadow);transition:transform .3s,box-shadow .3s,border-color .3s;text-decoration:none;display:block;position:relative}.g-card:hover,.g-feature:hover{transform:translateY(-4px);border-color:color-mix(in oklab,var(--g-primary) 40%,var(--g-line))}.g-card p,.g-feature p{color:var(--g-muted);margin:0}.g-card-glass{background:color-mix(in oklab,var(--g-surface) 60%,transparent);backdrop-filter:blur(16px)}.g-card-soft{background:var(--g-soft);border-color:transparent;box-shadow:none}.g-card-outline{box-shadow:none}.g-card-gradient{background:var(--g-gradient);color:#fff;border:0}.g-card-gradient p{color:rgba(255,255,255,.85)}.g-card-img{margin:-28px -28px 20px;width:calc(100% + 56px);max-width:none;aspect-ratio:16/9;object-fit:cover;border-radius:var(--g-radius) var(--g-radius) 0 0}.g-card-icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--g-soft);color:var(--g-primary);margin-bottom:18px}.g-stat{text-align:center}.g-stat strong{display:block;font-size:clamp(34px,5vw,48px);font-weight:800;letter-spacing:-.04em;background:var(--g-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.g-stat span{color:var(--g-muted);font-size:15px}.g-pricing{display:flex;flex-direction:column;gap:14px}.g-pricing h3{font-size:16px;color:var(--g-muted);font-weight:600}.g-price{font-size:46px;font-weight:800;letter-spacing:-.04em}.g-price small{font-size:15px;color:var(--g-muted);font-weight:500;margin-left:4px}.g-pricing-body{flex:1}.g-featured{border:2px solid var(--g-primary);transform:scale(1.03);box-shadow:0 30px 60px -24px color-mix(in oklab,var(--g-primary) 50%,transparent)}.g-pricing-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--g-gradient);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}.g-testimonial{margin:0}.g-testimonial blockquote{margin:0 0 20px;font-size:17px;line-height:1.6}.g-testimonial figcaption{display:flex;gap:12px;align-items:center}.g-testimonial figcaption span{display:block;color:var(--g-muted);font-size:14px}.g-avatar{display:inline-grid;place-items:center;border-radius:50%;background:var(--g-gradient);color:#fff;font-weight:700;font-size:14px;object-fit:cover;flex:none;border:2px solid var(--g-surface)}.g-avatars{display:flex}.g-avatars .g-avatar{margin-left:-10px}.g-avatars .g-avatar:first-child{margin:0}.g-member{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}.g-member span{color:var(--g-muted);font-size:14px}.g-member .g-avatar{font-size:28px;margin-bottom:10px}.g-stars{color:#f5b301;letter-spacing:2px}.g-stars i{color:var(--g-line);font-style:normal}.g-quote{border-left:3px solid var(--g-primary);padding:4px 0 4px 20px;margin:24px 0;font-size:20px;font-style:italic}.g-quote cite{display:block;margin-top:10px;font-size:14px;font-style:normal;color:var(--g-muted)}.g-kbd{font:600 12px 'JetBrains Mono',monospace;padding:3px 7px;border-radius:6px;border:1px solid var(--g-line);border-bottom-width:3px;background:var(--g-surface)}.g-mark{background:color-mix(in oklab,var(--g-primary) 22%,transparent);color:inherit;padding:0 4px;border-radius:4px}.g-inline-code{font:500 .9em 'JetBrains Mono',monospace;background:var(--g-soft);padding:2px 6px;border-radius:6px;color:var(--g-primary)}.g-list{padding-left:20px;margin:0 0 1em}.g-list li{margin:8px 0}.g-list-icon{list-style:none;padding:0}.g-list-icon li{display:flex;gap:10px;align-items:flex-start}.g-li-ic{color:var(--g-primary);margin-top:4px;flex:none}.g-code,.g-browser{border-radius:14px;overflow:hidden;background:#0c0e16;border:1px solid #1e2230;box-shadow:var(--g-shadow);margin:16px 0;color:#e6e9f5}.g-code-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid #1e2230;font-size:12px;color:#8b93a7;font-family:'JetBrains
-:root{--ink:#f4f5ff;--muted:#a9b1cb;--line:rgba(163,177,223,.16);--violet:#af8bff;--cyan:#6ce4f2;--pink:#ff94cf;--green:#89efbd}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:#090d19;color:var(--ink);font-family:Arial,sans-serif;line-height:1.7}.g-page{background:radial-gradient(ellipse at 90% 3%,#24224b 0,transparent 26%),radial-gradient(ellipse at 0 17%,#103541 0,transparent 24%),#090d19}a{color:inherit;text-decoration:none}a:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.15;letter-spacing:-.04em}.wrap{max-width:1160px;margin:auto;padding:0 28px}.top{position:sticky;top:0;z-index:10;background:rgba(9,13,25,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:80px}.brand{font-size:18px;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--cyan)}.nav-links{display:flex;align-items:center;gap:25px;font-size:13px;color:var(--muted)}.nav-links a:hover{color:white}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border:1px solid var(--line);border-radius:10px;font-size:13px;font-weight:700;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px);background:#263048}.btn.primary{background:linear-gradient(110deg,#b398ff,#7adaee);color:#0c1427;border:0}.btn.small{padding:9px 15px}.actions{display:flex;flex-wrap:wrap;gap:12px}.eyebrow{display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--cyan);margin-bottom:22px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 14px #89efbd70}.hero-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:54px;align-items:center;padding:85px 0 66px}h1{font-size:clamp(42px,4.5vw,64px);max-width:700px;margin-bottom:25px}.gradient{background:linear-gradient(100deg,var(--violet),var(--pink) 45%,var(--cyan));background-clip:text;-webkit-background-clip:text;color:transparent}.intro{font-size:16px;color:var(--muted);max-width:580px;margin-bottom:27px}.intro strong{color:var(--ink)}.hero-caption{font-size:12px;color:var(--muted);margin:24px 0 0}.visual{position:relative;padding:16px 0}.terminal{border:1px solid #535a7c;border-radius:16px;background:#0c1121;box-shadow:0 25px 100px #080a1880;overflow:hidden}.terminal-top{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;gap:7px;align-items:center}.lights{display:flex;gap:6px}.lights i{display:block;width:9px;height:9px;background:#ff93af;border-radius:50%}.lights i:nth-child(2){background:#ffd18c}.lights i:nth-child(3){background:#87e9be}.terminal-label{margin-left:auto;font:11px monospace;color:#8e9ab9}.terminal-content{padding:24px;font:12px/2.3 monospace;overflow-wrap:anywhere}.terminal-content p{margin:0 0 8px}.t-purple{color:var(--violet)}.t-cyan{color:var(--cyan)}.t-green{color:var(--green)}.t-pink{color:var(--pink)}.terminal-note{font:11px Arial;color:#8e9ab9;padding:0 24px 22px}.mini-card{margin:16px 0 0 35px;background:linear-gradient(110deg,#251d43,#15363c);border:1px solid #5c6081;border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:15px}.monogram{display:grid;place-items:center;width:43px;height:43px;border-radius:10px;color:#101526;background:linear-gradient(120deg,#c5a4ff,#72ddec);font-size:17px;font-weight:800}.mini-card strong{font-size:13px}.mini-card small{display:block;color:#b8c2db;font-size:11px}.signal-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}.signal{padding:24px 25px;background:#11182980;border-right:1px solid var(--line)}.signal:last-child{border:0}.signal b{display:block;font-size:25px;letter-spacing:-.04em;color:var(--violet)}.signal:nth-child(2) b{color:var(--cyan)}.signal:nth-child(3) b{color:var(--green)}.signal:nth-child(4) b{color:var(--pink)}.signal span{font-size:11px;color:var(--muted)}.section{padding:85px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:30px}.section-head h2{font-size:clamp(30px,3vw,42px);margin:0;max-width:670px}.section-head p{font-size:13px;color:var(--muted);max-width:310px;margin:0}.section .eyebrow{margin-bottom:14px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.panel{background:linear-gradient(135deg,#161e32,#0e1526);border:1px solid var(--line);border-radius:16px;padding:28px}.panel h3{font-size:23px;margin-bottom:15px}.panel p{color:var(--muted);font-size:14px}.panel p:last-child{margin-bottom:0}.panel.accent-v{border-top:3px solid var(--violet)}.panel.accent-c{border-top:3px solid var(--cyan)}.panel.accent-g{border-top:3px solid var(--green)}.panel.accent-p{border-top:3px solid var(--pink)}.tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}.tag{padding:5px 9px;border:1px solid #35415d;border-radius:6px;font:10px monospace;color:#c3cde6;background:#131b2e}.tag.violet{color:var(--violet)}.tag.cyan{color:var(--cyan)}.tag.green{color:var(--green)}.project-num{font:11px monospace;color:var(--muted);margin-bottom:23px}.project-title{font-size:29px!important}.project-visual{background:linear-gradient(120deg,#32234d,#142e3e);min-height:130px;margin:-28px -28px 24px;padding:28px;border-radius:14px 14px 0 0;display:flex;align-items:center;justify-content:space-between}.project-visual strong{font:700 29px monospace;letter-spacing:-.05em}.project-visual small{font:10px monospace;letter-spacing:.12em;color:#c4cce0}.case{margin:22px 0;padding-top:16px;border-top:1px solid var(--line)}.case dt{font-size:10px;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}.case dd{margin:0 0 13px;color:var(--muted);font-size:13px}.text-link{font-size:12px;color:var(--cyan);font-weight:700;display:inline-block;padding:7px 0}.text-link:hover{text-decoration:underline}.list{padding-left:18px;color:var(--muted);font-size:14px}.list li{margin-bottom:12px}.list strong{color:var(--ink)}.code-block{margin:18px 0 0;padding:19px;background:#080e1b;border:1px solid #25304a;border-radius:10px;font:12px/1.9 monospace;color:var(--cyan);white-space:pre-wrap;overflow-wrap:anywhere}.process-num{font:12px monospace;color:var(--pink);margin-bottom:17px}.stack-chips{display:flex;gap:8px;flex-wrap:wrap}.stack-chips span{padding:6px 10px;border:1px solid var(--line);border-radius:7px;color:#dce1f1;font-size:12px}.timeline{border-left:1px solid #566583;margin:0 0 0 7px;padding-left:25px}.timeline-item{position:relative;margin-bottom:30px}.timeline-item:before{content:'';position:absolute;left:-31px;top:5px;border-radius:50%;width:10px;height:10px;background:var(--cyan)}.timeline-item h3{font-size:18px;margin:8px 0}.timeline-item p{font-size:13px;color:var(--muted);margin:0}.timeline-item small{color:var(--pink);font:11px monospace}.faq{border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px;background:#11192b}.faq summary{cursor:pointer;font-weight:700;font-size:14px}.faq p{font-size:13px;color:var(--muted);margin:16px 0 0}.contact{padding:65px 50px;border:1px solid #65628d;border-radius:20px;background:radial-gradient(ellipse at 100% 100%,#1f5561,transparent 65%),linear-gradient(120deg,#342247,#151c35);position:relative}.contact h2{font-size:clamp(34px,4vw,50px);max-width:730px}.contact p{color:#c4cbe1;max-width:610px}.contact .actions{margin-top:25px}.foot{padding:30px 0;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted)}.foot a{color:var(--cyan)}.skip{position:absolute;left:20px;top:-80px;background:#fff;color:#111;padding:10px;z-index:100}.skip:focus{top:10px}@media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:25px;padding-top:52px}.visual{max-width:620px;width:100%;margin:auto}.nav-links{gap:14px}.nav-links .optional{display:none}.grid3{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column;gap:17px}.section-head p{max-width:650px}.section{padding:60px 0}}@media(max-width:600px){.wrap{padding:0 20px}.nav-in{min-height:70px;gap:12px;flex-wrap:wrap;padding:15px 20px}.nav-links{font-size:11px;gap:14px}.nav-links .btn{display:none}h1{font-size:42px}.hero-layout{padding-top:35px}.grid2,.grid3{grid-template-columns:1fr}.signal-row{grid-template-columns:1fr 1fr}.signal{padding:18px;border-bottom:1px solid var(--line)}.signal:nth-child(2){border-right:0}.signal b{font-size:22px}.panel{padding:24px}.project-visual{margin:-24px -24px 22px;padding:24px}.mini-card{margin-left:0}.contact{padding:35px 24px}.foot{flex-direction:column}.terminal-content{padding:20px;font-size:11px}.hero-caption{line-height:1.6}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}</style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-<a class="skip" href="#inicio">
- Pular para o conteúdo
-</a>
-<header class="top">
- <div class="wrap nav-in">
-  <a class="brand" href="#inicio">
-   GISLAINE
-   <span>
-    .DEV
-   </span>
-  </a>
-  <nav aria-label="Navegação principal" class="nav-links">
-   <a href="#sobre">
-    Sobre
-   </a>
-   <a href="#projetos">
-    Projetos
-   </a>
-   <a href="#comandos">
-    Comandos
-   </a>
-   <a class="optional" href="#formacao">
-    Formação
-   </a>
-   <a class="btn small" href="#contato">
-    Vamos conversar
-   </a>
-  </nav>
- </div>
-</header>
-<main id="inicio">
- <div class="wrap">
-  <div class="hero-layout">
-   <div>
-    <div class="eyebrow">
-     <span class="dot">
-     </span>
-     Full Stack / Web3 / Developer Tools
-    </div>
-    <h1>
-     Eu construo produtos.
-     <br>
-     <span class="gradient">
-      E as ferramentas
-      <br>
-      para ir além.
-     </span>
-    </h1>
-    <p class="intro">
-     Sou
-     <strong>
-      Gislaine Cristina Lopes
-     </strong>
-     . Desenvolvo aplicações Full Stack e Web3 e crio ferramentas autorais para quem escreve código: da linguagem
-     <strong>
-      GITML
-     </strong>
-     ao terminal
-     <strong>
-      GBit Shell
-     </strong>
-     .
-    </p>
-    <div class="actions">
-     <a class="btn primary" href="#projetos">
-      Conhecer meus projetos
-     </a>
-     <a class="btn" href="https://github.com/Gislaine-web3">
-      Explorar GitHub
-     </a>
-    </div>
-    <p class="hero-caption">
-     Código aberto. Produtos publicados. Ferramentas que uso diariamente.
-    </p>
-   </div>
-   <div class="visual">
-    <div class="terminal">
-     <div class="terminal-top">
-      <span class="lights">
-       <i>
-       </i>
-       <i>
-       </i>
-       <i>
-       </i>
-      </span>
-      <span class="terminal-label">
-       GBit Shell / developer workspace
-      </span>
-     </div>
-     <div class="terminal-content">
-      <p>
-       <span class="t-purple">
-        gislaine@dev
-       </span>
-       <span class="t-cyan">
-        GBIT ~/portfolio
-       </span>
-       <span class="t-green">
-        (main)
-       </span>
-      </p>
-      <p>
-       <span class="t-pink">
-        &gt;
-       </span>
-       gh auth login
-       <br>
-       <span class="t-green">
-        Autenticação do GitHub
-       </span>
-      </p>
-      <p>
-       <span class="t-pink">
-        &gt;
-       </span>
-       ghpush --remote
-       <br>
-       <span class="t-cyan">
-        https://github.com/seu-usuario/seu-repo.git
-       </span>
-      </p>
-      <p>
-       <span class="t-pink">
-        &gt;
-       </span>
-       gitml build index.gitml
-       <br>
-       <span class="t-purple">
-        Uma linguagem criada por mim.
-        <br>
-        Um portfólio construído com ela.
-       </span>
-      </p>
-     </div>
-     <div class="terminal-note">
-      Ilustração do fluxo de trabalho, não um terminal executável.
-     </div>
-    </div>
-    <div class="mini-card">
-     <span class="monogram">
-      GL
-     </span>
-     <div>
-      <strong>
-       Construir também é simplificar.
-      </strong>
-      <small>
-       Engenharia de software + experiência de desenvolvimento
-      </small>
-     </div>
-    </div>
-   </div>
-  </div>
-  <div class="signal-row">
-   <div class="signal">
-    <b>
-     14+
-    </b>
-    <span>
-     Pacotes CLI no ecossistema*
-    </span>
-   </div>
-   <div class="signal">
-    <b>
-     2
-    </b>
-    <span>
-     Extensões no Marketplace
-    </span>
-   </div>
-   <div class="signal">
-    <b>
-     GITML
-    </b>
-    <span>
-     Linguagem de marcação autoral
-    </span>
-   </div>
-   <div class="signal">
-    <b>
-     Open source
-    </b>
-    <span>
-     Repositórios públicos para explorar
-    </span>
-   </div>
-  </div>
-  <p class="hero-caption">
-   *Quantidade informada pela autora. Explore os pacotes pelos links dos projetos.
-  </p>
- </div>
- <section class="section" id="sobre">
-  <div class="wrap">
-   <div class="eyebrow">
-    01 / Quem está por trás
-   </div>
-   <div class="section-head">
-    <h2>
-     Curiosidade para entender.
-     <br>
-     <span class="gradient">
-      Autonomia para construir.
-     </span>
-    </h2>
-    <p>
-     Minha trajetória conecta desenvolvimento, gestão e criação de ferramentas.
-    </p>
-   </div>
-   <div class="grid2">
-    <article class="panel accent-v">
-     <h3>
-      Mais do que usar frameworks
-     </h3>
-     <p>
-      Sou desenvolvedora Full Stack e Web3, graduanda em Engenharia de Software pela Gran Faculdade. Gosto de entender o que acontece por trás das interfaces, dos comandos e das arquiteturas.
-     </p>
-     <p>
-      Essa curiosidade se transforma em projetos: linguagens de marcação, terminais, CLIs, ferramentas de dados e aplicações web. O GBIT nasceu da vontade de reduzir tarefas repetitivas da minha própria rotina.
-     </p>
-     <p>
-      <strong>
-       O GBit Shell é o terminal que uso diariamente.
-      </strong>
-      Construir, usar e aperfeiçoar o mesmo produto aproxima meu código dos problemas reais de quem desenvolve.
-     </p>
-    </article>
-    <article class="panel accent-c">
-     <h3>
-      Onde posso contribuir
-     </h3>
-     <ul class="list">
-      <li>
-       <strong>
-        Interfaces e produtos web:
-       </strong>
-       experiências responsivas, aplicações React e Next.js e dashboards.
-      </li>
-      <li>
-       <strong>
-        Backend e integrações:
-       </strong>
-       APIs, automação, dados e organização de sistemas.
-      </li>
-      <li>
-       <strong>
-        Developer Experience:
-       </strong>
-       CLIs, extensões para VS Code e fluxos de trabalho mais simples.
-      </li>
-      <li>
-       <strong>
-        Web3:
-       </strong>
-       contratos Solidity, integração EVM e ambientes de testes.
-      </li>
-     </ul>
-     <div class="actions">
-      <a class="btn small" href="https://www.linkedin.com/in/gislaine-programadora">
-       LinkedIn
-      </a>
-      <a class="btn small" href="https://github.com/Gislaine-web3">
-       Meu código
-      </a>
-     </div>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section" id="projetos">
-  <div class="wrap">
-   <div class="eyebrow">
-    02 / Projetos selecionados
-   </div>
-   <div class="section-head">
-    <h2>
-     Ideias que viraram
-     <br>
-     <span class="gradient">
-      ferramentas de verdade.
-     </span>
-    </h2>
-    <p>
-     Comece pelos dois produtos que representam minha forma de construir: linguagem, terminal e distribuição pública.
-    </p>
-   </div>
-   <div class="grid2">
-    <article class="panel accent-c">
-     <div class="project-visual">
-      <strong>
-       GBit Shell
-      </strong>
-      <small>
-       TERMINAL + EXTENSÃO
-      </small>
-     </div>
-     <div class="project-num">
-      PROJETO / 01
-     </div>
-     <div class="tag-row">
-      <span class="tag">
-       Python
-      </span>
-      <span class="tag">
-       Git
-      </span>
-      <span class="tag">
-       VS Code API
-      </span>
-     </div>
-     <h3 class="project-title">
-      Meu terminal. Minha rotina.
-     </h3>
-     <p>
-      Um shell autoral integrado ao VS Code, com prompt informativo, autocompletar e comandos para trabalhar com projetos e GitHub.
-     </p>
-     <dl class="case">
-      <dt>
-       Problema
-      </dt>
-      <dd>
-       Tarefas repetitivas no terminal e etapas dispersas para publicar código.
-      </dd>
-      <dt>
-       Minha solução
-      </dt>
-      <dd>
-       Comandos como ghpush, serve, ports e killport, combinados aos comandos habituais do sistema.
-      </dd>
-      <dt>
-       Entrega
-      </dt>
-      <dd>
-       CLI e extensão publicados; ferramenta utilizada diariamente pela autora.
-      </dd>
-     </dl>
-     <div class="actions">
-      <a class="btn primary small" href="https://marketplace.visualstudio.com/items?itemName=gislaine.gbit-shell-terminal">
-       Instalar no VS Code
-      </a>
-      <a class="btn small" href="https://github.com/Gislaine-web3/gbit-shell">
-       Código-fonte
-      </a>
-     </div>
-    </article>
-    <article class="panel accent-v">
-     <div class="project-visual">
-      <strong>
-       GITML
-      </strong>
-      <small>
-       LINGUAGEM + CLI
-      </small>
-     </div>
-     <div class="project-num">
-      PROJETO / 02
-     </div>
-     <div class="tag-row">
-      <span class="tag">
-       JavaScript
-      </span>
-      <span class="tag">
-       CLI npm
-      </span>
-      <span class="tag">
-       VS Code
-      </span>
-     </div>
-     <h3 class="project-title">
-      Uma linguagem com minha assinatura.
-     </h3>
-     <p>
-      Linguagem declarativa de marcação para criar páginas em arquivos .gitml, com componentes e integração ao editor.
-     </p>
-     <dl class="case">
-      <dt>
-       Problema
-      </dt>
-      <dd>
-       Escrever páginas e documentação mantendo uma estrutura clara e reaproveitável.
-      </dd>
-      <dt>
-       Minha solução
-      </dt>
-      <dd>
-       Linguagem própria, componentes declarativos, CLI e extensão para o VS Code.
-      </dd>
-      <dt>
-       Entrega
-      </dt>
-      <dd>
-       Pacote npm e extensão publicados. Este portfólio também tem sua fonte em GITML.
-      </dd>
-     </dl>
-     <div class="actions">
-      <a class="btn primary small" href="https://www.npmjs.com/package/gitml">
-       Conhecer no npm
-      </a>
-      <a class="btn small" href="https://marketplace.visualstudio.com/items?itemName=gislaine-web3.gitml">
-       Extensão VS Code
-      </a>
-     </div>
-    </article>
-   </div>
-   <div class="grid2" style="margin-top:22px">
-    <article class="panel">
-     <div class="project-num">
-      Node.js / dados / processos
-     </div>
-     <h3>
-      GBit Container &amp; DB Dados
-     </h3>
-     <p>
-      Orquestração leve de processos locais e banco NoSQL orientado a arquivos para prototipagem e aplicações.
-     </p>
-     <a class="text-link" href="https://www.npmjs.com/package/gbit-db-dados">
-      Explorar o projeto
-     </a>
-    </article>
-    <article class="panel">
-     <div class="project-num">
-      Scaffolding / automação / documentação
-     </div>
-     <h3>
-      GBIT CLI Ecosystem
-     </h3>
-     <p>
-      Ferramentas como create-gbit-app, gbit-next, gbit-react, gbit-fix, gbit-start e gbit-readme para diferentes etapas do desenvolvimento.
-     </p>
-     <a class="text-link" href="https://gislaine-programadora.github.io/gbit-ecossistema/">
-      Explorar o projeto
-     </a>
-    </article>
-    <article class="panel">
-     <div class="project-num">
-      Solidity / Foundry / EVM
-     </div>
-     <h3>
-      Web3 Forge &amp; Smart Contracts
-     </h3>
-     <p>
-      Scaffolding de contratos, integração frontend Web3 e simulação de staking em ambientes de testes.
-     </p>
-     <a class="text-link" href="https://github.com/Gislaine-web3/web3gbit-cli">
-      Explorar o projeto
-     </a>
-    </article>
-    <article class="panel">
-     <div class="project-num">
-      Go / Python / sistemas distribuídos
-     </div>
-     <h3>
-      Nextrade Core &amp; Nexus Trader
-     </h3>
-     <p>
-      Projetos de arquitetura e monitoramento com Go, FastAPI, mensageria, cache e visualização de dados. Sem alegações de ganhos ou benchmarks de produção.
-     </p>
-     <a class="text-link" href="https://github.com/Gislaine-web3">
-      Explorar o projeto
-     </a>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section" id="comandos">
-  <div class="wrap">
-   <div class="eyebrow">
-    03 / Do portfólio para seu terminal
-   </div>
-   <div class="section-head">
-    <h2>
-     Não fique só na apresentação.
-     <br>
-     <span class="gradient">
-      Experimente as ferramentas.
-     </span>
-    </h2>
-    <p>
-     Comandos para executar na sua máquina. Sem demos que simulam funcionalidades inexistentes.
-    </p>
-   </div>
-   <div class="grid2">
-    <article class="panel accent-c">
-     <h3>
-      Dentro do VS Code
-     </h3>
-     <p>
-      Instale as duas extensões oficiais diretamente pelo editor ou pela linha de comando.
-     </p>
-     <pre class="code-block">code --install-extension gislaine.gbit-shell-terminal
-code --install-extension gislaine-web3.gitml</pre>
-    </article>
-    <article class="panel accent-v">
-     <h3>
-      GBit Shell + GitHub
-     </h3>
-     <p>
-      Para enviar ao repositório existente: autentique sua conta, salve as alterações e use o endereço real do projeto.
-     </p>
-     <pre class="code-block">gh auth login
-ghpush --remote https://github.com/seu-usuario/seu-repo.git -m "docs: atualiza portfolio"</pre>
-    </article>
-    <article class="panel accent-g">
-     <h3>
-      Construir com GITML
-     </h3>
-     <p>
-      Instale o CLI, confira o arquivo e gere a página a partir da fonte.
-     </p>
-     <pre class="code-block">npm install -g gitml
-gitml check index.gitml
-gitml build index.gitml</pre>
-    </article>
-    <article class="panel accent-p">
-     <h3>
-      Começar um projeto
-     </h3>
-     <p>
-      Explore as ferramentas do ecossistema. Revise os comandos e a documentação antes de executá-los.
-     </p>
-     <pre class="code-block">npx create-gbit-app meu-projeto
-npx gbit-address</pre>
-     <p style="margin-top:15px;font-size:12px">
-      Carteiras e chaves geradas para testes não devem ser utilizadas para guardar fundos reais.
-     </p>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section" id="metodo">
-  <div class="wrap">
-   <div class="eyebrow">
-    04 / Como eu trabalho
-   </div>
-   <div class="section-head">
-    <h2>
-     Da pergunta certa
-     <br>
-     à entrega que faz sentido.
-    </h2>
-    <p>
-     Meu foco: entender o problema, organizar a solução e tornar o produto utilizável.
-    </p>
-   </div>
-   <div class="grid3">
-    <article class="panel">
-     <div class="process-num">
-      01 / DESCOBERTA
-     </div>
-     <h3>
-      Entender antes de codar
-     </h3>
-     <p>
-      Mapear quem usa, quais tarefas se repetem e onde existe atrito. A solução começa pelo fluxo, não pela biblioteca.
-     </p>
-    </article>
-    <article class="panel">
-     <div class="process-num">
-      02 / ENGENHARIA
-     </div>
-     <h3>
-      Projetar e implementar
-     </h3>
-     <p>
-      Escolher a stack conforme o problema, estruturar responsabilidades e conectar interface, APIs e ferramentas.
-     </p>
-    </article>
-    <article class="panel">
-     <div class="process-num">
-      03 / ENTREGA
-     </div>
-     <h3>
-      Publicar e evoluir
-     </h3>
-     <p>
-      Documentar como usar, disponibilizar código e distribuições e melhorar a experiência a partir do uso cotidiano.
-     </p>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section" id="competencias">
-  <div class="wrap">
-   <div class="eyebrow">
-    05 / Tecnologias
-   </div>
-   <div class="section-head">
-    <h2>
-     Uma stack ampla.
-     <br>
-     <span class="gradient">
-      Escolhas com propósito.
-     </span>
-    </h2>
-    <p>
-     Tecnologias presentes nos meus projetos e estudos, sem percentuais artificiais de domínio.
-    </p>
-   </div>
-   <div class="grid3">
-    <article class="panel accent-c">
-     <h3>
-      Frontend &amp; UI
-     </h3>
-     <div class="stack-chips">
-      <span>
-       React
-      </span>
-      <span>
-       Next.js
-      </span>
-      <span>
-       TypeScript
-      </span>
-      <span>
-       Vite
-      </span>
-      <span>
-       Tailwind CSS
-      </span>
-      <span>
-       GITML
-      </span>
-     </div>
-     <p style="margin-top:20px">
-      Interfaces responsivas, componentes, dashboards e experiências de navegação.
-     </p>
-    </article>
-    <article class="panel accent-g">
-     <h3>
-      Backend &amp; infraestrutura
-     </h3>
-     <div class="stack-chips">
-      <span>
-       Node.js
-      </span>
-      <span>
-       Express
-      </span>
-      <span>
-       Python
-      </span>
-      <span>
-       FastAPI
-      </span>
-      <span>
-       Go
-      </span>
-      <span>
-       Fiber
-      </span>
-      <span>
-       PostgreSQL
-      </span>
-      <span>
-       Redis
-      </span>
-      <span>
-       RabbitMQ
-      </span>
-      <span>
-       Docker
-      </span>
-     </div>
-     <p style="margin-top:20px">
-      APIs, dados, mensageria, serviços e automações de desenvolvimento.
-     </p>
-    </article>
-    <article class="panel accent-v">
-     <h3>
-      Web3 &amp; developer tools
-     </h3>
-     <div class="stack-chips">
-      <span>
-       Solidity
-      </span>
-      <span>
-       Foundry
-      </span>
-      <span>
-       Hardhat
-      </span>
-      <span>
-       Wagmi
-      </span>
-      <span>
-       Viem
-      </span>
-      <span>
-       VS Code API
-      </span>
-      <span>
-       npm
-      </span>
-      <span>
-       Git
-      </span>
-     </div>
-     <p style="margin-top:20px">
-      Integração EVM, contratos, ferramentas CLI e distribuição de extensões.
-     </p>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section" id="formacao">
-  <div class="wrap">
-   <div class="eyebrow">
-    06 / Formação
-   </div>
-   <div class="section-head">
-    <h2>
-     Engenharia e gestão
-     <br>
-     na mesma trajetória.
-    </h2>
-    <p>
-     Base técnica para construir. Visão sistêmica para organizar e entregar.
-    </p>
-   </div>
-   <div class="grid2">
-    <div class="timeline">
-     <article class="timeline-item">
-      <small>
-       EM ANDAMENTO
-      </small>
-      <h3>
-       Bacharelado em Engenharia de Software
-      </h3>
-      <p>
-       Gran Faculdade. Arquitetura, requisitos, qualidade e desenvolvimento de software.
-      </p>
-     </article>
-     <article class="timeline-item">
-      <small>
-       CONCLUÍDO
-      </small>
-      <h3>
-       MBA em Gerenciamento de Projetos de TI
-      </h3>
-      <p>
-       Planejamento, metodologias ágeis, governança e organização de entregas.
-      </p>
-     </article>
-     <article class="timeline-item">
-      <small>
-       CONCLUÍDO
-      </small>
-      <h3>
-       Graduação em Administração Pública
-      </h3>
-      <p>
-       Visão de processos, organização e eficiência operacional.
-      </p>
-     </article>
-    </div>
-    <article class="panel accent-p">
-     <h3>
-      Um portfólio que também é um projeto
-     </h3>
-     <p>
-      Esta página nasce de um arquivo
-      <strong>
-       index.gitml
-      </strong>
-      . Em vez de apenas apresentar minha linguagem, uso a própria GITML para construir a experiência.
-     </p>
-     <p>
-      O layout combina marcação declarativa, HTML semântico e CSS personalizado: uma demonstração prática de como uma ferramenta autoral pode apoiar um produto real.
-     </p>
-     <a class="text-link" href="https://www.npmjs.com/package/gitml">
-      Conhecer a linguagem GITML
-     </a>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section" id="publicacoes">
-  <div class="wrap">
-   <div class="eyebrow">
-    07 / Explore meu trabalho
-   </div>
-   <div class="section-head">
-    <h2>
-     Código, pacotes e extensões.
-     <br>
-     Tudo conectado.
-    </h2>
-    <p>
-     Links diretos para examinar documentação, repositórios e produtos publicados.
-    </p>
-   </div>
-   <div class="grid3">
-    <article class="panel">
-     <h3>
-      GitHub
-     </h3>
-     <p>
-      Código-fonte, documentação e histórico de evolução dos projetos.
-     </p>
-     <div class="actions">
-      <a class="btn small" href="https://github.com/Gislaine-web3">
-       Gislaine-web3
-      </a>
-      <a class="btn small" href="https://github.com/Gislaine-programadora">
-       Gislaine-programadora
-      </a>
-     </div>
-    </article>
-    <article class="panel">
-     <h3>
-      Marketplace
-     </h3>
-     <p>
-      As duas extensões para experimentar dentro do VS Code.
-     </p>
-     <div class="actions">
-      <a class="btn small" href="https://marketplace.visualstudio.com/items?itemName=gislaine.gbit-shell-terminal">
-       GBit Shell
-      </a>
-      <a class="btn small" href="https://marketplace.visualstudio.com/items?itemName=gislaine-web3.gitml">
-       GITML
-      </a>
-     </div>
-    </article>
-    <article class="panel">
-     <h3>
-      npm
-     </h3>
-     <p>
-      Pacotes CLI, instruções de instalação e documentação.
-     </p>
-     <div class="actions">
-      <a class="btn small" href="https://www.npmjs.com/package/gitml">
-       gitml
-      </a>
-      <a class="btn small" href="https://www.npmjs.com/package/create-gbit-app">
-       create-gbit-app
-      </a>
-     </div>
-    </article>
-   </div>
-  </div>
- </section>
- <section class="section">
-  <div class="wrap">
-   <div class="eyebrow">
-    08 / Para quem está conhecendo meu trabalho
-   </div>
-   <div class="section-head">
-    <h2>
-     Perguntas rápidas.
-    </h2>
-    <p>
-     Um ponto de partida para uma conversa técnica ou uma colaboração.
-    </p>
-   </div>
-   <details class="faq">
-    <summary>
-     Por onde começar a avaliar meu portfólio?
-    </summary>
-    <p>
-     Comece pelo GBit Shell e pela GITML. Explore o código, leia a documentação e experimente os comandos. Eles conectam desenvolvimento de produto, ferramentas e distribuição pública.
-    </p>
-   </details>
-   <details class="faq">
-    <summary>
-     Que oportunidades me interessam?
-    </summary>
-    <p>
-     Desenvolvimento Full Stack, Web3 e ferramentas para desenvolvedores, além de colaborações open-source. Vamos conversar sobre escopo, contexto e como posso contribuir.
-    </p>
-   </details>
-   <details class="faq">
-    <summary>
-     Onde encontro detalhes técnicos de cada projeto?
-    </summary>
-    <p>
-     Nos repositórios, READMEs e páginas dos pacotes vinculados acima. Esta página apresenta a visão geral; a documentação de cada produto traz os requisitos e instruções específicos.
-    </p>
-   </details>
-  </div>
- </section>
- <section class="section" id="contato">
-  <div class="wrap">
-   <div class="contact">
-    <div class="eyebrow">
-     <span class="dot">
-     </span>
-     Vamos construir algo relevante
-    </div>
-    <h2>
-     Seu próximo projeto
-     <br>
-     pode começar com
-     <br>
-     <span class="gradient">
-      uma boa conversa.
-     </span>
-    </h2>
-    <p>
-     Buscando uma desenvolvedora que conecta produto, engenharia e ferramentas? Estou aberta a oportunidades e colaborações em Full Stack, Web3 e Developer Experience.
-    </p>
-    <div class="actions">
-     <a class="btn primary" href="mailto:gislainelophes@gmail.com">
-      Enviar e-mail
-     </a>
-     <a class="btn" href="https://www.linkedin.com/in/gislaine-programadora">
-      Conversar no LinkedIn
-     </a>
-    </div>
-    <p style="font-size:12px;margin:23px 0 0">
-     gislainelophes@gmail.com
-    </p>
-   </div>
-  </div>
- </section>
-</main>
-<footer class="wrap foot">
- <span>
-  Gislaine Cristina Lopes / 2026
- </span>
- <span>
-  Fonte em GITML. Design e desenvolvimento autoral.
- </span>
- <a href="#inicio">
-  Voltar ao início
- </a>
-</footer>
+    body {
+      margin: 0;
+      background: #090d19;
+      color: var(--ink);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-</div>
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+      letter-spacing: -.04em;
+    }
+
+    .wrap {
+      max-width: 1160px;
+      margin: auto;
+      padding: 0 28px;
+    }
+
+    .g-page {
+      background:
+        radial-gradient(ellipse at 90% 3%, #24224b 0, transparent 26%),
+        radial-gradient(ellipse at 0 17%, #103541 0, transparent 24%),
+        #090d19;
+    }
+
+    /* BANNER NO TOPO DO SITE */
+    .portfolio-banner {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      line-height: 0;
+      background: #090d19;
+    }
+
+    .portfolio-banner-image {
+      display: block;
+      width: 100%;
+      max-width: 1440px;
+      height: auto;
+      margin: 0 auto;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9, 13, 25, .92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-in {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 80px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .brand span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #263048;
+    }
+
+    .btn.primary {
+      background: linear-gradient(110deg, #b398ff, #7adaee);
+      color: #0c1427;
+      border: 0;
+    }
+
+    .btn.small {
+      padding: 9px 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 14px #89efbd70;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 54px;
+      align-items: center;
+      padding: 85px 0 66px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 4.5vw, 64px);
+      max-width: 700px;
+      margin-bottom: 25px;
+    }
+
+    .gradient {
+      background: linear-gradient(100deg, var(--violet), var(--pink) 45%, var(--cyan));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 27px;
+    }
+
+    .intro strong {
+      color: var(--ink);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(17, 25, 43, .7);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 85px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      margin-bottom: 30px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 3vw, 42px);
+      margin: 0 0 12px;
+      max-width: 670px;
+    }
+
+    .section-head p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .grid4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .panel {
+      background: linear-gradient(135deg, #161e32, #0e1526);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .panel h3 {
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .panel p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .panel.accent-v {
+      border-top: 3px solid var(--violet);
+    }
+
+    .panel.accent-c {
+      border-top: 3px solid var(--cyan);
+    }
+
+    .panel.accent-g {
+      border-top: 3px solid var(--green);
+    }
+
+    .panel.accent-p {
+      border-top: 3px solid var(--pink);
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid #35415d;
+      border-radius: 6px;
+      font: 10px monospace;
+      color: #c3cde6;
+      background: #131b2e;
+    }
+
+    .tag.violet {
+      color: var(--violet);
+    }
+
+    .tag.cyan {
+      color: var(--cyan);
+    }
+
+    .tag.green {
+      color: var(--green);
+    }
+
+    .project-title {
+      font-size: 29px;
+    }
+
+    .project-visual {
+      background: linear-gradient(120deg, #32234d, #142e3e);
+      min-height: 130px;
+      margin: -28px -28px 24px;
+      padding: 28px;
+      border-radius: 14px 14px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-visual strong {
+      font: 700 29px monospace;
+      letter-spacing: -.05em;
+    }
+
+    .project-visual small {
+      font: 10px monospace;
+      letter-spacing: .12em;
+      color: #c4cce0;
+    }
+
+    .list {
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .list li {
+      margin-bottom: 12px;
+    }
+
+    .list strong {
+      color: var(--ink);
+    }
+
+    .code-block {
+      margin: 18px 0 0;
+      padding: 19px;
+      background: #080e1b;
+      border: 1px solid #25304a;
+      border-radius: 10px;
+      font: 12px/1.9 monospace;
+      color: var(--cyan);
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .timeline {
+      border-left: 1px solid #566583;
+      margin: 0 0 0 7px;
+      padding-left: 25px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 5px;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: var(--cyan);
+    }
+
+    .timeline-item h3 {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .timeline-item p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .timeline-item small {
+      color: var(--pink);
+      font: 11px monospace;
+    }
+
+    .contact {
+      padding: 65px 50px;
+      border: 1px solid #65628d;
+      border-radius: 20px;
+      background:
+        radial-gradient(ellipse at 100% 100%, #1f5561, transparent 65%),
+        linear-gradient(120deg, #342247, #151c35);
+      position: relative;
+    }
+
+    .contact h2 {
+      font-size: clamp(34px, 4vw, 50px);
+      max-width: 730px;
+    }
+
+    .contact p {
+      color: #c4cbe1;
+      max-width: 610px;
+    }
+
+    .contact .actions {
+      margin-top: 25px;
+    }
+
+    .foot {
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .foot a {
+      color: var(--cyan);
+    }
+
+    .skip {
+      position: absolute;
+      left: 20px;
+      top: -80px;
+      background: #fff;
+      color: #111;
+      padding: 10px;
+      z-index: 100;
+    }
+
+    .skip:focus {
+      top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 52px;
+      }
+
+      .grid3,
+      .grid4 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links .optional {
+        display: none;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .wrap {
+        padding: 0 20px;
+      }
+
+      .nav-in {
+        min-height: 70px;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        font-size: 11px;
+        gap: 14px;
+      }
+
+      .nav-links .btn {
+        display: none;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .hero-layout {
+        padding-top: 35px;
+      }
+
+      .grid2,
+      .grid3,
+      .grid4 {
+        grid-template-columns: 1fr;
+      }
+
+      .panel,
+      .contact {
+        padding: 24px;
+      }
+
+      .foot {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BANNER PRINCIPAL DO PORTFÓLIO: aparece antes da navegação -->
+  <header class="portfolio-banner">
+    <img
+      src="./banner-portfolio.png"
+      alt="Gislaine Cristina Lopes — Full Stack Developer, Web3 e Ecossistema GBIT"
+      class="portfolio-banner-image"
+      fetchpriority="high"
+    >
+  </header>
+
+  <div class="g-page">
+
+    <a class="skip" href="#inicio">Pular para o conteúdo</a>
+
+    <header class="top">
+      <div class="wrap nav-in">
+        <a class="brand" href="#inicio">
+          GISLAINE
+          <span>.DEV</span>
+        </a>
+
+        <nav aria-label="Navegação principal" class="nav-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#ecossistema">Ecossistema</a>
+          <a class="optional" href="#formacao">Formação</a>
+          <a class="btn small" href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inicio">
+
+      <section class="hero-layout wrap">
+        <div>
+          <div class="eyebrow">
+            <span class="dot"></span>
+            FULL STACK DEVELOPER · WEB3 · SOFTWARE TOOLS
+          </div>
+
+          <h1>
+            Transformo ideias em
+            <span class="gradient">software, ferramentas e experiências digitais.</span>
+          </h1>
+
+          <p class="intro">
+            Sou <strong>Gislaine Cristina Lopes</strong>, desenvolvedora Full Stack com foco em Web3 e criadora do ecossistema GBIT.
+            Desenvolvo aplicações, ferramentas CLI, linguagens e soluções que simplificam o trabalho de quem cria tecnologia.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#projetos">Explorar projetos</a>
+            <a class="btn" href="https://github.com/Gislaine-web3">Ver GitHub</a>
+          </div>
+
+          <p class="badge" style="margin-top: 24px;">
+            ● Projetos publicados no npm e no VS Code Marketplace
+          </p>
+        </div>
+
+        <div class="visual">
+          <div class="terminal">
+            <div class="terminal-top">
+              <div class="lights">
+                <i></i><i></i><i></i>
+              </div>
+              <span class="terminal-label">gbit-shell</span>
+            </div>
+
+            <div class="terminal-content">
+              <p><span class="t-purple">gislaine@gbit</span>:~$ <span class="t-cyan">gbit</span></p>
+              <p><span class="t-green">GBit Shell</span> pronto para desenvolvimento.</p>
+              <p><span class="t-purple">gislaine@gbit</span>:~$ <span class="t-cyan">ghpush -m "feat: nova funcionalidade"</span></p>
+              <p><span class="t-green">✔</span> Commit e publicação no GitHub.</p>
+            </div>
+
+            <div class="terminal-note">
+              Terminal com integração Git, GitHub e comandos de produtividade.
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <div class="monogram">G</div>
+            <div>
+              <strong>Ecossistema GBIT</strong>
+              <small>Ferramentas, CLIs, dados e Web3</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              PERFIL PROFISSIONAL
+            </div>
+            <h2>Engenharia de software com visão de produto</h2>
+            <p>Da ideia à implementação: aplicações, automação e ferramentas para desenvolvedores.</p>
+          </div>
+
+          <div class="grid2">
+            <article class="panel accent-v">
+              <h3>Sobre mim</h3>
+              <p>
+                Sou desenvolvedora Full Stack e criadora de produtos de software. Meu trabalho combina desenvolvimento de aplicações,
+                automação, ferramentas de linha de comando e experiências voltadas à produtividade.
+              </p>
+              <p>
+                Gosto de transformar problemas do fluxo de desenvolvimento em soluções reutilizáveis: terminais, linguagens,
+                bibliotecas, ferramentas de dados e aplicações Web3.
+              </p>
+
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn primary" href="https://github.com/Gislaine-web3">GitHub</a>
+                <a class="btn" href="https://www.linkedin.com/in/gislaine-web3">LinkedIn</a>
+              </div>
+            </article>
+
+            <article class="panel accent-c">
+              <h3>Foco de atuação</h3>
+              <ul class="list">
+                <li>Desenvolvimento Full Stack e aplicações web.</li>
+                <li>Web3, blockchain e integração de smart contracts.</li>
+                <li>Ferramentas CLI, automação e produtividade.</li>
+                <li>Bibliotecas, bancos de dados e componentes reutilizáveis.</li>
+                <li>Integração de ferramentas, Git e publicação de projetos.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="destaques" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              GBIT ECOSYSTEM
+            </div>
+            <h2>Um ecossistema criado para construir</h2>
+            <p>Ferramentas que conectam criação de projetos, desenvolvimento, dados, Web3 e publicação.</p>
+          </div>
+
+          <div class="grid4">
+            <div class="panel accent-v">
+              <h3>14</h3>
+              <p>CLIs no ecossistema GBIT</p>
+            </div>
+
+            <div class="panel accent-c">
+              <h3>5</h3>
+              <p>CLIs em destaque no README</p>
+            </div>
+
+            <div class="panel accent-g">
+              <h3>2</h3>
+              <p>Formas de utilizar GITML</p>
+            </div>
+
+            <div class="panel accent-p">
+              <h3>2</h3>
+              <p>Canais: npm e VS Code Marketplace</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              PROJETOS EM DESTAQUE
+            </div>
+            <h2>Soluções que desenvolvi</h2>
+            <p>Produtos e projetos autorais que representam meu trabalho.</p>
+          </div>
+
+          <div class="grid2">
+            <article class="panel accent-v">
+              <div class="project-visual">
+                <strong>GBit Shell</strong>
+                <small>CLI · VS CODE</small>
+              </div>
+
+              <div class="tag-row">
+                <span class="tag green">CLI</span>
+                <span class="tag cyan">EXTENSÃO VS CODE</span>
+              </div>
+
+              <h3 class="project-title">GBit Shell</h3>
+              <p>
+                Terminal de desenvolvimento com autocomplete contextual, prompt informativo, integração Git/GitHub e comandos de
+                produtividade, incluindo o fluxo de publicação <code>ghpush</code>.
+              </p>
+
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn primary" href="https://marketplace.visualstudio.com/items?itemName=gislaine.gbit-shell-terminal">VS Code Marketplace</a>
+                <a class="btn" href="https://github.com/Gislaine-web3/gbit-shell">Código-fonte</a>
+              </div>
+            </article>
+
+            <article class="panel accent-c">
+              <div class="project-visual">
+                <strong>GITML</strong>
+                <small>LANGUAGE · NPM</small>
+              </div>
+
+              <div class="tag-row">
+                <span class="tag violet">LINGUAGEM</span>
+                <span class="tag cyan">NPM</span>
+                <span class="tag green">VS CODE</span>
+              </div>
+
+              <h3 class="project-title">GITML</h3>
+              <p>
+                Linguagem de marcação para criar páginas em arquivos <code>.gitml</code> ou integrar componentes GITML a documentos
+                HTML5. Conta com CLI e suporte de edição no VS Code.
+              </p>
+
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn primary" href="https://www.npmjs.com/package/gitml">Pacote npm</a>
+                <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=gislaine-web3.gitml">Extensão VS Code</a>
+                <a class="btn" href="https://github.com/Gislaine-web3/gitml-language-npm">Repositório</a>
+              </div>
+            </article>
+
+            <article class="panel accent-g">
+              <div class="project-visual">
+                <strong>GBit DB</strong>
+                <small>DADOS · NPM · CLI</small>
+              </div>
+
+              <div class="tag-row">
+                <span class="tag cyan">BANCO DE DADOS</span>
+                <span class="tag green">NPM</span>
+                <span class="tag violet">CLI</span>
+              </div>
+
+              <h3 class="project-title">GBit DB Dados</h3>
+              <p>
+                Banco NoSQL local orientado a arquivos, publicado como pacote npm e utilizável por linha de comando ou como
+                biblioteca Node.js.
+              </p>
+
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn primary" href="https://github.com/Gislaine-web3/gbit-db-dados">Código-fonte</a>
+                <a class="btn" href="https://www.npmjs.com/package/gbit-db-dados">Pacote npm</a>
+              </div>
+            </article>
+
+            <article class="panel accent-p">
+              <div class="project-visual">
+                <strong>GBit CLI</strong>
+                <small>ECOSYSTEM · 14 TOOLS</small>
+              </div>
+
+              <div class="tag-row">
+                <span class="tag violet">ECOSSISTEMA</span>
+                <span class="tag cyan">14 FERRAMENTAS CLI</span>
+              </div>
+
+              <h3 class="project-title">GBit CLI Ecosystem</h3>
+              <p>
+                Conjunto de ferramentas para fluxos Web e Web3: criação de projetos, automação, documentação, inicialização de
+                repositórios e carteiras Ethereum de teste.
+              </p>
+
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn primary" href="https://github.com/Gislaine-web3/gbit-ecossistema">Explorar ecossistema</a>
+                <a class="btn" href="https://www.npmjs.com/package/create-gbit-app">create-gbit-app</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ecossistema" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              FERRAMENTAS PARA DESENVOLVEDORES
+            </div>
+            <h2>Do primeiro comando à publicação</h2>
+            <p>O ecossistema GBIT apoia diferentes etapas do ciclo de desenvolvimento.</p>
+          </div>
+
+          <div class="grid3">
+            <article class="panel accent-v">
+              <h3>Criar projetos</h3>
+              <p><code>create-gbit-app</code> inicia projetos com Vite, React e TypeScript; <code>gbit-next</code> apoia projetos Next.js.</p>
+            </article>
+
+            <article class="panel accent-c">
+              <h3>Clonar e iniciar</h3>
+              <p><code>gbit-start</code> automatiza clonagem de repositórios, instalação de dependências e inicialização.</p>
+            </article>
+
+            <article class="panel accent-g">
+              <h3>Documentar</h3>
+              <p><code>gbit-readme</code> auxilia na criação de documentação README para projetos.</p>
+            </article>
+
+            <article class="panel accent-p">
+              <h3>Explorar Web3</h3>
+              <p><code>gbit-address</code> gera carteiras Ethereum de teste com endereço e chave privada.</p>
+            </article>
+
+            <article class="panel accent-v">
+              <h3>Trabalhar com dados</h3>
+              <p><code>gbit-db-dados</code> oferece armazenamento local orientado a arquivos por CLI ou biblioteca Node.js.</p>
+            </article>
+
+            <article class="panel accent-c">
+              <h3>Desenvolver e publicar</h3>
+              <p>GBit Shell reúne comandos de terminal e fluxos Git/GitHub para apoiar o trabalho diário.</p>
+            </article>
+          </div>
+
+          <div class="actions" style="margin-top: 28px;">
+            <a class="btn primary" href="https://github.com/Gislaine-web3/gbit-ecossistema">Ver GBit Ecossistema</a>
+            <a class="btn" href="https://github.com/Gislaine-web3/web3gbit-cli">Explorar CLI Web3</a>
+            <a class="btn" href="https://github.com/Gislaine-web3/gbit-stakin">Conhecer GBit Staking</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="competencias" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              STACK E COMPETÊNCIAS
+            </div>
+            <h2>Tecnologias e frentes de trabalho</h2>
+            <p>Ferramentas e áreas presentes nos projetos do meu portfólio.</p>
+          </div>
+
+          <div class="grid3">
+            <article class="panel accent-v">
+              <h3>Desenvolvimento</h3>
+              <div class="tag-row">
+                <span class="tag">Frontend</span>
+                <span class="tag">Backend</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">React</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Python</span>
+              </div>
+            </article>
+
+            <article class="panel accent-c">
+              <h3>Web3 e blockchain</h3>
+              <div class="tag-row">
+                <span class="tag">Web3</span>
+                <span class="tag">Ethereum</span>
+                <span class="tag">Smart contracts</span>
+                <span class="tag">Carteiras de teste</span>
+                <span class="tag">dApps</span>
+              </div>
+              <p>Desenvolvimento e integração de ferramentas e fluxos para aplicações descentralizadas.</p>
+            </article>
+
+            <article class="panel accent-g">
+              <h3>Engenharia e ferramentas</h3>
+              <div class="tag-row">
+                <span class="tag">npm</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">VS Code</span>
+                <span class="tag">CLI</span>
+                <span class="tag">Deploy</span>
+                <span class="tag">GITML</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="formacao" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              FORMAÇÃO ACADÊMICA
+            </div>
+            <h2>Tecnologia com visão de gestão</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <small>EM ANDAMENTO</small>
+              <h3>Bacharelado em Engenharia de Software</h3>
+              <p>Formação voltada à análise, construção, arquitetura, testes e evolução de sistemas de software.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Bacharelado em Administração Pública</h3>
+              <p>Formação em gestão pública, processos organizacionais e administração.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>MBA em Gerenciamento de Projetos de TI</h3>
+              <p>Formação complementar em planejamento e gerenciamento de projetos de tecnologia da informação.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publicacoes" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              PRESENÇA PROFISSIONAL
+            </div>
+            <h2>Código aberto, pacotes e extensões</h2>
+            <p>Acesse os canais onde publico código, ferramentas e documentação.</p>
+          </div>
+
+          <div class="grid3">
+            <article class="panel accent-v">
+              <h3>GitHub</h3>
+              <p>Repositórios públicos, código-fonte, documentação e projetos em desenvolvimento.</p>
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn" href="https://github.com/Gislaine-web3">Abrir perfil GitHub</a>
+              </div>
+            </article>
+
+            <article class="panel accent-c">
+              <h3>Visual Studio Code</h3>
+              <p>Extensões GBit Shell e GITML para integrar ferramentas próprias ao ambiente de desenvolvimento.</p>
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=gislaine.gbit-shell-terminal">GBit Shell</a>
+                <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=gislaine-web3.gitml">GITML</a>
+              </div>
+            </article>
+
+            <article class="panel accent-g">
+              <h3>npm</h3>
+              <p>Pacotes para instalar, testar e integrar ferramentas em projetos Node.js.</p>
+              <div class="actions" style="margin-top: 20px;">
+                <a class="btn" href="https://www.npmjs.com/package/gitml">GITML</a>
+                <a class="btn" href="https://www.npmjs.com/package/gbit-db-dados">GBit DB Dados</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section">
+        <div class="wrap">
+          <div class="contact">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              OPORTUNIDADES E COLABORAÇÕES
+            </div>
+
+            <h2>Vamos construir algo útil?</h2>
+
+            <p>
+              Aberta a oportunidades, parcerias e projetos em Full Stack, Web3 e ferramentas para desenvolvedores.
+              Explore meus repositórios, conheça as soluções que desenvolvo e entre em contato para conversar sobre tecnologia e
+              colaboração.
+            </p>
+
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/Gislaine-web3">Acessar GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/gislaine-web3">LinkedIn</a>
+              <a class="btn" href="mailto:gislainelophes@gmail.com">E-mail</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <strong>Gislaine Cristina Lopes</strong>
+        </div>
+
+        <div class="actions">
+          <a href="https://github.com/Gislaine-web3">GitHub</a>
+          <a href="https://www.linkedin.com/in/gislaine-web3">LinkedIn</a>
+          <a href="mailto:gislainelophes@gmail.com">E-mail</a>
+        </div>
+
+        <div>
+          Portfólio profissional · Desenvolvido com GITML
+        </div>
+      </div>
+    </footer>
+
+  </div>
 
 </body>
 </html>
