@@ -1,5 +1,10 @@
 🚀 Portfólio | Gislaine Cristina
 
+
+<p align="center">
+  <img src="banner-portfolio.png" width="100%" alt="Gislaine Cristina Lopes — Portfólio">
+</p>
+
 <p align="center">
   <strong>Software Engineer | Full Stack Developer | Web3 & Blockchain</strong>
 </p>
