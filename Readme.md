@@ -87,8 +87,10 @@ Solução de armazenamento de dados desenvolvida para integrar o ecossistema GBi
 
 ## 🌍 Acesse meu portfólio
 
-**Portfólio online:**                        .mit gislaine-web3.github.io/portfolio-gislaine-gitml/
+**Portfólio online:**   
 
+
+https://gislaine-web3.github.io/portfolio-gislaine-gitml/
 
 ## 📦 Publicação com GitHub Pages
 
