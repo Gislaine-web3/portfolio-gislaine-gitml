@@ -87,11 +87,12 @@ Solução de armazenamento de dados desenvolvida para integrar o ecossistema GBi
 
 ## 🌍 Acesse meu portfólio
 
-**Portfólio online:** adicione aqui o endereço publicado pelo GitHub Pages.
+**Portfólio online:** gislaine-web3.github.io/portfolio-gislaine-gitml/
+
 
 ## 📦 Publicação com GitHub Pages
 
-Este projeto pode ser publicado gratuitamente pelo GitHub Pages.
+publicado pelo GitHub Pages.
 
 1. Envie o arquivo `index.html` para a raiz do repositório.
 2. Acesse **Settings** no GitHub.
